@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pandemic Outbreak Simulation Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="timeline.css">
+
+</head>
+<body>
+<header>
+    <nav id="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="brief.html">Brief</a></li>
+            <li><a href="investigation.html">Investigation</a></li>
+            <li><a href="plan.html">Plan & Design</a></li>
+            <li><a href="create.html" class="active">Create</a></li>
+            <li><a href="evaluation.html">Evaluation</a></li>
+            <li><a href="references.html">References & Word Count</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div class="content-container">
+        <div class="row">
+            <div class="half-width">
+                <div class="timeline">
+                    <div class="container left">
+                        <div class="content">
+                            <h2>10 Apr</h2>
+
+                            <ul>
+                                <li><p>Start of ALT 3</p></li>
+                                <li><p>Initial brainstorming</p></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="container right">
+                        <div class="content">
+                            <h2>12 Apr</h2>
+
+                            <ul>
+                                <li><p>Reseaching possible Ideas</p></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="container left">
+                        <div class="content">
+                            <h2>13 Apr</h2>
+
+                            <ul>
+                                <li><p>Pandemic Growth simulation idea chosen</p></li>
+                                <li><p>Initial reseach for model calculations.</p></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="container right">
+                        <div class="content">
+                            <h2>16 Apr</h2>
+
+                            <ul>
+                                <li><p>Start of programming</p></li>
+                                <li><p>Core GUI setup</p></li>
+                                <li><p>Model Core setup</p></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="container left">
+                        <div class="content">
+                            <h2>17 Apr</h2>
+
+                                <ul>
+                                    <li><p>Initial GUI window setuo</p></li>
+                                    <li><p>Most Basic Model (SIR)</p></li>
+                                </ul>
+
+                        </div>
+                    </div>
+
+                    <div class="container right">
+                        <div class="content">
+                            <h2>19 Apr</h2>
+
+                            <ul>
+                                <li><p>Initial Website Design</p></li>
+                                <li><p>Improved GUI</p></li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                    <div class="container left">
+                        <div class="content">
+                            <h2>20 Apr</h2>
+
+                            <ul>
+                                <li><p>SIRV model calculations</p></li>
+                                <li><p>Canvas in the main window</p></li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                    <div class="container right">
+                        <div class="content">
+                            <h2>21 Apr</h2>
+
+                            <ul>
+                                <li><p>Start of report</p></li>
+                                <li><p>Basic SIRV Model</p></li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                    <div class="container left">
+                        <div class="content">
+                            <h2>22 Apr</h2>
+
+                            <ul>
+                                <li><p>Final Model implementations to SEIRD</p></li>
+                                <li><p>Final GUI tweaks</p></li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                    <div class="container right">
+                        <div class="content">
+                            <h2>26 Apr</h2>
+
+                                <ul>
+                                    <li><p>Filling out the website with report</p></li>
+                                    <li><p>Laying out components on website</p></li>
+                                </ul>
+
+                        </div>
+                    </div>
+
+                    <div class="container left">
+                        <div class="content">
+                            <h2>29 Apr</h2>
+                            <ul>
+                                <li><p>Video production</p></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="half-width">
+                <div class="UnorderedList">
+                    <h2 style="text-align: center; margin-top: 0">Project Creation</h2>
+                    <ul style="
+                                width: fit-content;
+                                margin-bottom: 0px">
+                        <li><h4>There were a few challenges I had to overcome when doing this project. The main challenge of making this project was learning the basics of calculus for my model. This was necessary as I wanted the most accurate model without any real-world data. I have built my model by using two functions that consisted of the deriv function which was behind calculation differential equations that represented  the dynamics of the pandemic spread such as the susceptible, infected etc. Given the state of the system and time, it will compute the rates of change for each part of the model. These rates dictate how individuals transition between different states, such as susceptible, exposed, symptomatic, etc. based on specified epidemiological parameters. The other function that is included in my model is the run_simulation which is the function that is behind the execution of the model over a specific time. It utilizes numerical integration to compute the evolution of the model’s compartments over time, generation a time-series representation of the pandemic’s progression. This function provides the framework for analyzing and visualizing the dynamics of the pandemic.</h4></li>
+                        <li><h4>I have used modular programming to make the model more efficient and accurate. At first, I built a simple (Susceptible, Infected, Recovered) model that included no calculus. This was over a specific amount of time, and it was not very efficient to run as it used a for loop and its time complexity was n! and that did not satisfy me. The next step I have taken was to include calculus and include a better model type which was (S I R Vaccinated). After adding the vaccinations in I have realized that vaccination was very hard to model as I wanted a dynamic vaccination rate as more people got sick. This was hard to model and I have resulted in going for a simpler type of my model which was (S E I R). This included: Susceptible, Exposed, Infected and Recovered. This was easier to implement. I have also added a dynamic transmission rate as before it was a specified amount per day. Dynamic transmission rates allowed me to add a more complex part to my model as it had to base the transmission rate on the infected. The next step I took was to add Symptomatic, Asymptomatic and hospitalized. This was easier than implementing the dynamic transmission rate.  At the end I added the Deceased part to my model making it (S E I R D) model. This was easy as I have added that a person that is hospitalized would have a chance to die. </h4></li>
+                        <li><h4>I have carried out plenty of testing throughout the project and the model creation. This included white box testing which allowed me to understand the issues with internal code, identifying logical errors in the models’ calculations. Black box testing allowed to test the functionality of the model, test that it would meet my specific requirements, and it allowed me to asses how it behaves from an end-user perspective. I had a few colleagues for class and from the year above me to beta test my whole code as well as separate parts of code, like the UX and UI as well as the functionality of the model.</h4></li>
+                    </ul>
+
+                    <iframe src="Test%20table.png" style="margin: 10px 20px; height: 500px; margin-right: 40px"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <p>&copy; 2024 ALT 3</p>
+</footer>
+</body>
+</html>
