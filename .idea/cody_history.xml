@@ -88,6 +88,131 @@
             </llm>
           </llm>
         </chat>
+        <chat>
+          <accountId value="VXNlcjoxNzA1OTQ=" />
+          <internalId value="f5f26340-e2dd-450c-9b52-aefe490497d8" />
+          <llm>
+            <llm>
+              <model value="anthropic/claude-3-sonnet-20240229" />
+              <provider value="Anthropic" />
+              <title value="Claude 3 Sonnet" />
+            </llm>
+          </llm>
+        </chat>
+        <chat>
+          <accountId value="VXNlcjoxNzA1OTQ=" />
+          <internalId value="301394c5-91ec-4765-bc26-794f091bff97" />
+          <llm>
+            <llm>
+              <model value="anthropic/claude-3-sonnet-20240229" />
+              <provider value="Anthropic" />
+              <title value="Claude 3 Sonnet" />
+            </llm>
+          </llm>
+          <messages>
+            <list>
+              <message>
+                <speaker value="HUMAN" />
+                <text value="Review the shared code context and configurations to identify the test framework and libraries in use. Then, generate a suite of multiple unit tests for the functions in &lt;selected&gt; using the detected test framework and libraries. Be sure to import the function being tested. Follow the same patterns as any shared context. Only add packages, imports, dependencies, and assertions if they are used in the shared code. Pay attention to the file path of each shared context to see if test for &lt;selected&gt; already exists. If one exists, focus on generating new unit tests for uncovered cases. If none are detected, import common unit test libraries for {languageName}. Focus on validating key functionality with simple and complete assertions. Only include mocks if one is detected in the shared code. Before writing the tests, identify which test libraries and frameworks to import, e.g. 'No new imports needed - using existing libs' or 'Importing test framework that matches shared context usage' or 'Importing the defined framework', etc. Then briefly summarize test coverage and any limitations. At the end, enclose the full completed code for the new unit tests, including all necessary imports, in a single markdown codeblock. No fragments or TODO. The new tests should validate expected functionality and cover edge cases for &lt;selected&gt; with all required imports, including importing the function being tested. Do not repeat existing tests." />
+              </message>
+              <message>
+                <speaker value="ASSISTANT" />
+                <text value="No test framework or libraries detected in the shared context. &#10;&#10;Importing unittest for unit testing.&#10;&#10;```python&#10;import unittest&#10;from main import _init_toolbar&#10;&#10;class TestInitToolbar(unittest.TestCase):&#10;&#10;    def test_init_toolbar_adds_separator(self):&#10;        toolbar = MockToolbar()&#10;        _init_toolbar(toolbar)&#10;        toolbar.add_separator.assert_called()&#10;&#10;    def test_init_toolbar_adds_toolitems(self):&#10;        toolbar = MockToolbar()&#10;        toolitems = [(&quot;Open&quot;, &quot;Open file&quot;, &quot;open.png&quot;, open_callback)]&#10;        _init_toolbar(toolbar, toolitems)&#10;        toolbar.add_toolitem.assert_called_with(&quot;Open&quot;, &quot;Open file&quot;, &quot;open.png&quot;, open_callback, orientation=&quot;horizontal&quot;) &#10;&#10;```&#10;&#10;This covers basic cases for _init_toolbar by validating it calls the expected methods on the toolbar with test doubles. Further tests could be added for different toolitem configurations, exceptions, and more validation on the calls. The lack of context limits coverage here." />
+              </message>
+            </list>
+          </messages>
+          <updatedAt value="2024-05-18T15:21:11.4882566" />
+        </chat>
+        <chat>
+          <accountId value="VXNlcjoxNzA1OTQ=" />
+          <internalId value="0b13f30a-9355-4267-bc19-b197d1ac79df" />
+          <llm>
+            <llm>
+              <model value="anthropic/claude-3-sonnet-20240229" />
+              <provider value="Anthropic" />
+              <title value="Claude 3 Sonnet" />
+            </llm>
+          </llm>
+          <messages>
+            <list>
+              <message>
+                <speaker value="HUMAN" />
+                <text value="Please review and analyze @\\c:\Users\krzys\OneDrive\Backup\ALT 3\Python source Code\main.py:30-35  and identify potential areas for improvement related to code smells, readability, maintainability, performance, security, etc. Do not list issues already addressed in the given code. Focus on providing up to 5 constructive suggestions that could make the code more robust, efficient, or align with best practices. For each suggestion, provide a brief explanation of the potential benefits. After listing any recommendations, summarize if you found notable opportunities to enhance the code quality overall or if the code generally follows sound design principles. If no issues found, reply 'There are no errors.'" />
+              </message>
+              <message>
+                <speaker value="ASSISTANT" />
+                <text value="Here are 5 potential improvements for the selected Python code:&#10;&#10;1. Use more descriptive variable names like `toolbar` instead of just `self`. This makes the code more readable and maintainable. &#10;&#10;2. Consider adding type hints for function parameters and return values. This helps catch bugs and improves understandability.&#10;&#10;3. Validate input parameters like `text` and `tooltip_text` to avoid potential crashes from unexpected input.&#10;&#10;4. Break the `add_toolitem()` method into smaller functions to improve modularity and separation of concerns.&#10;&#10;5. Add docstrings to document what the functions do. This helps maintainability.&#10;&#10;Overall, the code follows reasonable practices but could be improved with more descriptive names, validation, modularity, and documentation. The suggestions above would make the code easier to maintain and extend in the future." />
+              </message>
+            </list>
+          </messages>
+          <updatedAt value="2024-05-18T19:45:18.8888956" />
+        </chat>
+        <chat>
+          <accountId value="VXNlcjoxNzA1OTQ=" />
+          <internalId value="e4781a3e-27fd-4afb-871c-16a62bc69320" />
+          <llm>
+            <llm>
+              <model value="anthropic/claude-3-sonnet-20240229" />
+              <provider value="Anthropic" />
+              <title value="Claude 3 Sonnet" />
+            </llm>
+          </llm>
+        </chat>
+        <chat>
+          <accountId value="VXNlcjoxNzA1OTQ=" />
+          <internalId value="105841e0-af92-4a8f-8fd6-044f38665666" />
+          <llm>
+            <llm>
+              <model value="anthropic/claude-3-sonnet-20240229" />
+              <provider value="Anthropic" />
+              <title value="Claude 3 Sonnet" />
+            </llm>
+          </llm>
+        </chat>
+        <chat>
+          <accountId value="VXNlcjoxNzA1OTQ=" />
+          <internalId value="cbc71c69-fdb4-495c-812d-143c65f1ad05" />
+          <llm>
+            <llm>
+              <model value="anthropic/claude-3-sonnet-20240229" />
+              <provider value="Anthropic" />
+              <title value="Claude 3 Sonnet" />
+            </llm>
+          </llm>
+        </chat>
+        <chat>
+          <accountId value="VXNlcjoxNzA1OTQ=" />
+          <internalId value="1aba4542-7105-406b-9dac-325b252afbfe" />
+          <llm>
+            <llm>
+              <model value="anthropic/claude-3-sonnet-20240229" />
+              <provider value="Anthropic" />
+              <title value="Claude 3 Sonnet" />
+            </llm>
+          </llm>
+        </chat>
+        <chat>
+          <accountId value="VXNlcjoxNzA1OTQ=" />
+          <internalId value="3058c7e9-08c2-4fd6-bea9-26d73ef36268" />
+          <llm>
+            <llm>
+              <model value="anthropic/claude-3-sonnet-20240229" />
+              <provider value="Anthropic" />
+              <title value="Claude 3 Sonnet" />
+            </llm>
+          </llm>
+        </chat>
+        <chat>
+          <accountId value="VXNlcjoxNzA1OTQ=" />
+          <internalId value="e93917c0-6809-4ffd-903b-034a93e5c741" />
+          <llm>
+            <llm>
+              <model value="anthropic/claude-3-sonnet-20240229" />
+              <provider value="Anthropic" />
+              <title value="Claude 3 Sonnet" />
+            </llm>
+          </llm>
+        </chat>
       </list>
     </chats>
     <defaultLlm>
